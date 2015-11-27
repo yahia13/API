@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--simple html file to view the json-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+</head>
+<body>
+<!--for loop to view each dataset and load static files-->
+{%for row in data%}
+    <div>
+        {% load staticfiles %}
+        <h1>{{row.title}}</h1>
+        <img = src= "{%static ""%}{{row.image}}"/>
+        <p>{{row.description}}</p>
+
+
+    </div>
+{%endfor%}
+</body>
+</html>
